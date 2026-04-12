@@ -688,78 +688,78 @@ function Navbar() {
               exit={{ opacity: 0 }}
             />
 
-            <motion.aside
-              ref={menuRef}
-              className="mobileMenu"
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ duration: 0.28, ease: "easeOut" }}
-            >
-              <div className="mobileMenu__top">
-                <span className="mobileMenu__title">MilCore</span>
-                <button
-                  type="button"
-                  className="mobileMenu__close"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  ×
-                </button>
-              </div>
+         <motion.aside
+  ref={menuRef}
+  className="mobileMenu"
+  initial={{ x: "100%" }}
+  animate={{ x: 0 }}
+  exit={{ x: "100%" }}
+  transition={{ duration: 0.28, ease: "easeOut" }}
+>
+  <div className="mobileMenu__top">
+    <span className="mobileMenu__title">MilCore</span>
+    <button
+      type="button"
+      className="mobileMenu__close"
+      onClick={() => setMenuOpen(false)}
+    >
+      ×
+    </button>
+  </div>
 
-              <div className="mobileMenu__section">
-                {navItems.map((item) => (
-                  <button
-                    key={item.id}
-                    type="button"
-                    className={`mobileMenu__link ${
-                      location.pathname === "/" && activeSection === item.id
-                        ? "mobileMenu__link--active"
-                        : ""
-                    }`}
-                    onClick={() => scrollOrGo(item.id)}
-                  >
-                    {item.label}
-                  </button>
-                ))}
-              </div>
+  <div className="mobileMenu__bottom">
+    <p className="mobileMenu__label">{t("language")}</p>
+    <div className="mobileMenu__langs">
+      {["sk", "de", "en"].map((lang) => (
+        <button
+          key={lang}
+          type="button"
+          onClick={() => {
+            changeLanguage(lang);
+            setMenuOpen(false);
+          }}
+          className={`mobileMenu__langBtn ${
+            i18n.language === lang
+              ? "mobileMenu__langBtn--active"
+              : ""
+          }`}
+        >
+          {lang.toUpperCase()}
+        </button>
+      ))}
+    </div>
+  </div>
 
-              <div className="mobileMenu__section">
-                {serviceLinks.map((item) => (
-                  <Link
-                    key={item.to}
-                    to={item.to}
-                    className="mobileMenu__subLink"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
+  <div className="mobileMenu__section">
+    {navItems.map((item) => (
+      <button
+        key={item.id}
+        type="button"
+        className={`mobileMenu__link ${
+          location.pathname === "/" && activeSection === item.id
+            ? "mobileMenu__link--active"
+            : ""
+        }`}
+        onClick={() => scrollOrGo(item.id)}
+      >
+        {item.label}
+      </button>
+    ))}
+  </div>
 
-              <div className="mobileMenu__bottom">
-                <p className="mobileMenu__label">{t("language")}</p>
-                <div className="mobileMenu__langs">
-                  {["sk", "de", "en"].map((lang) => (
-                    <button
-                      key={lang}
-                      type="button"
-                      onClick={() => {
-                        changeLanguage(lang);
-                        setMenuOpen(false);
-                      }}
-                      className={`mobileMenu__langBtn ${
-                        i18n.language === lang
-                          ? "mobileMenu__langBtn--active"
-                          : ""
-                      }`}
-                    >
-                      {lang.toUpperCase()}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </motion.aside>
+  <div className="mobileMenu__section">
+    {serviceLinks.map((item) => (
+      <Link
+        key={item.to}
+        to={item.to}
+        className="mobileMenu__subLink"
+        onClick={() => setMenuOpen(false)}
+      >
+        {item.label}
+      </Link>
+    ))}
+  </div>
+</motion.aside>
           </>
         )}
       </AnimatePresence>
