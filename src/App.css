@@ -351,7 +351,7 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.68) 0%, rgba(10, 10, 10, 0.96) 100%);
+    linear-gradient(180deg, rgba(0, 0, 0, 0.76) 0%, rgba(10, 10, 10, 0.94) 100%);
 }
 
 .hero__inner {
@@ -372,6 +372,7 @@ a {
   font-size: 13px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+  color: #ffffff;
 }
 
 .hero__title {
@@ -379,14 +380,16 @@ a {
   font-size: clamp(42px, 6vw, 78px);
   line-height: 1.05;
   font-weight: 700;
+  color: #ffffff;
   text-shadow: 0 0 18px rgba(0, 0, 0, 0.8);
 }
+
 
 .hero__subtitle {
   margin: 0 auto 40px;
   max-width: 760px;
   font-size: 20px;
-  opacity: 0.92;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .hero__buttons {

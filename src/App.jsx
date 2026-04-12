@@ -44,9 +44,109 @@ const resources = {
       menu: "Menu",
       close: "Zavrieť",
       language: "Jazyk",
+
+      about_title: "Spoľahlivý partner pre vaše objekty",
+      about_text:
+        "Zabezpečujeme komplexnú starostlivosť o budovy, exteriéry a okolie s dôrazom na kvalitu, rýchlosť a profesionálny prístup.",
+
+      haus_title: "MilCore s.r.o – Spoľahlivý partner pre správu budov",
+      haus_intro1:
+        "Hľadáte spoľahlivú a profesionálnu starostlivosť o vašu nehnuteľnosť? MilCore s.r.o ponúka komplexné služby správy budov s najvyššou zodpovednosťou, kvalitou a flexibilitou.",
+      haus_intro2:
+        "Náš tím sa stará o to, aby vaša budova vždy zanechala bezchybný prvý dojem – či už ide o pravidelné čistenie alebo technickú údržbu. Vieme, aké dôležité je, aby všetko prebiehalo hladko, a preto pracujeme presne, rýchlo a efektívne.",
+      haus_services_title: "Naše služby zahŕňajú:",
+      haus_service1: "Pravidelné čistenie spoločných priestorov a schodísk",
+      haus_service2: "Drobné opravy a technická údržba",
+      haus_service3: "Kontrola a dohľad nad nehnuteľnosťou",
+      haus_why_title: "Prečo zvoliť MilCore s.r.o.?",
+      haus_why1: "Spoľahlivý a kvalifikovaný tím",
+      haus_why2: "Individuálny prístup ku každému zákazníkovi",
+      haus_why3: "Rýchla reakcia a dostupnosť",
+      haus_why4: "Viditeľná kvalita",
+      haus_conclusion:
+        "Zverte starostlivosť o vašu nehnuteľnosť profesionálom a užívajte si čisté a bezpečné prostredie.",
+      haus_final:
+        "MilCore s.r.o – Staráme sa o vašu nehnuteľnosť, ako keby bola naša vlastná.",
+
+      garden_title:
+        "Starostlivosť o záhradu – Perfektne upravená záhrada s MilCore s.r.o",
+      garden_intro1:
+        "Krásna záhrada je viac než len vonkajší priestor – je to vaša osobná oáza pokoja a oddychu. So spoločnosťou MilCore s.r.o máte spoľahlivého partnera, ktorý sa o vašu záhradu postará profesionálne počas celého roka.",
+      garden_intro2:
+        "Náš skúsený tím vám ponúka komplexné služby v oblasti starostlivosti o záhradu, prispôsobené vašim požiadavkám a potrebám vašich zelených plôch.",
+      garden_services_title: "Naše služby zahŕňajú:",
+      garden_service1: "Pravidelné kosenie a starostlivosť o trávnik",
+      garden_service2: "Strihanie a tvarovanie živých plotov",
+      garden_service3: "Starostlivosť o kvety a rastliny",
+      garden_service4: "Odstraňovanie buriny a úprava pôdy",
+      garden_service5: "Zber a odvoz lístia, sezónne práce",
+      garden_service6: "Príprava záhrady na jar a zimu",
+      garden_why_title: "Prečo MilCore s.r.o.?",
+      garden_why1: "Profesionálny a skúsený tím",
+      garden_why2: "Flexibilné termíny a individuálny prístup",
+      garden_why3: "Kvalitné vybavenie a precízna práca",
+      garden_why4: "Férové ceny a transparentné ponuky",
+      garden_conclusion:
+        "Pracujeme efektívne, spoľahlivo a s dôrazom na detail. Či už ide o súkromnú záhradu alebo firemný areál – zabezpečíme, aby vaše zelené plochy vždy vyzerali upravene a reprezentatívne.",
+      garden_final:
+        "Spoľahnite sa na kvalitu a skúsenosti – zverte starostlivosť o svoju záhradu profesionálom z MilCore s.r.o.",
+      garden_cta:
+        "👉 Kontaktujte nás ešte dnes a doprajte svojej záhrade nový vzhľad!",
+
+      winter_title:
+        "Zimná údržba – Bezpečnosť a spoľahlivosť s MilCore s.r.o",
+      winter_intro1:
+        "Zima prináša sneh, ľad a náročné podmienky, ktoré môžu ohroziť bezpečnosť vašich plôch. So spoločnosťou MilCore s.r.o sa nemusíte obávať – zabezpečíme spoľahlivú a včasnú zimnú údržbu.",
+      winter_intro2:
+        "Náš tím je pripravený rýchlo a efektívne reagovať bez ohľadu na počasie, aby boli vaše priestory vždy bezpečné a priechodné.",
+      winter_services_title: "Naše služby zahŕňajú:",
+      winter_service1:
+        "Odstraňovanie snehu z chodníkov, príjazdových ciest a parkovísk",
+      winter_service2: "Posyp soľou a protišmykovým materiálom",
+      winter_service3: "Odstraňovanie ľadu a prevencia pošmyknutia",
+      winter_service4: "Pravidelné kontroly a zásahy počas sneženia",
+      winter_service5: "Údržba súkromných aj komerčných objektov",
+      winter_why_title: "Prečo MilCore s.r.o.?",
+      winter_why1: "Rýchla reakcia a dostupnosť 24/7",
+      winter_why2: "Spoľahlivý a skúsený tím",
+      winter_why3: "Profesionálne vybavenie pre všetky podmienky",
+      winter_why4: "Flexibilné zmluvy a férové ceny",
+      winter_conclusion:
+        "Pracujeme zodpovedne a organizovane, s neustálym sledovaním poveternostných podmienok, aby sme zasiahli včas.",
+      winter_final:
+        "Zverte zimnú údržbu profesionálom a zabezpečte bezpečnosť pre seba, zamestnancov aj klientov s MilCore s.r.o.",
+      winter_cta:
+        "👉 Kontaktujte nás ešte dnes a pripravte sa na zimu bez stresu!",
+
+      disposal_title:
+        "Vypratávanie – Rýchlo, čisto a spoľahlivo s MilCore s.r.o",
+      disposal_intro1:
+        "Potrebujete vypratať byt, dom, kanceláriu alebo pivnicu? MilCore s.r.o vám ponúka profesionálne vypratávacie služby, vďaka ktorým sa rýchlo a bez starostí zbavíte nepotrebných vecí.",
+      disposal_intro2:
+        "Či už ide o starý nábytok, spotrebiče, odpad po rekonštrukcii alebo kompletné vypratanie priestorov – náš tím pracuje efektívne, diskrétne a s dôrazom na čistotu a poriadok.",
+      disposal_services_title: "Naše služby zahŕňajú:",
+      disposal_service1: "Vypratávanie bytov, domov, pivníc a kancelárií",
+      disposal_service2: "Odvoz starého nábytku a elektrospotrebičov",
+      disposal_service3: "Likvidácia objemného a zmiešaného odpadu",
+      disposal_service4:
+        "Vypratávanie po sťahovaní, rekonštrukcii alebo dedičskom konaní",
+      disposal_service5: "Ekologická likvidácia a triedenie odpadu",
+      disposal_why_title: "Prečo MilCore s.r.o.?",
+      disposal_why1: "Rýchle termíny a spoľahlivé vykonanie",
+      disposal_why2: "Skúsený tím a profesionálny prístup",
+      disposal_why3: "Čistá a efektívna práca",
+      disposal_why4: "Transparentné ceny bez skrytých poplatkov",
+      disposal_conclusion:
+        "Postaráme sa o kompletné vypratanie priestoru od začiatku až do konca, aby ste sa vy nemuseli o nič starať.",
+      disposal_final:
+        "Osloboďte sa od zbytočností jednoducho a bez stresu – s MilCore s.r.o.",
+      disposal_cta:
+        "👉 Kontaktujte nás ešte dnes a my sa postaráme o rýchle a profesionálne vypratanie!",
+
       back_button: "Späť na úvod",
     },
   },
+
   de: {
     translation: {
       hero_title: "Professionelle Gebäudedienstleistungen",
@@ -66,7 +166,8 @@ const resources = {
       form_message: "Nachricht",
       form_name_required: "Bitte geben Sie Ihren Namen ein.",
       form_email_required: "Bitte geben Sie Ihre E-Mail-Adresse ein.",
-      form_email_invalid: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      form_email_invalid:
+        "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
       form_message_required: "Bitte geben Sie Ihre Nachricht ein.",
       form_success:
         "Ihr E-Mail-Programm wurde mit einer vorbereiteten Nachricht geöffnet.",
@@ -76,9 +177,123 @@ const resources = {
       menu: "Menü",
       close: "Schließen",
       language: "Sprache",
+
+      about_title: "Zuverlässiger Partner für Ihre Objekte",
+      about_text:
+        "Wir bieten umfassende Betreuung von Gebäuden, Außenflächen und Anlagen mit Fokus auf Qualität, Schnelligkeit und Professionalität.",
+
+      haus_title:
+        "MilCore s.r.o – Ihr zuverlässiger Partner für Hausbetreuung",
+      haus_intro1:
+        "Suchen Sie eine zuverlässige und professionelle Betreuung Ihrer Immobilie? MilCore s.r.o bietet umfassende Hausbetreuungsleistungen mit höchster Verantwortung, Qualität und Flexibilität.",
+      haus_intro2:
+        "Unser Team sorgt dafür, dass Ihr Gebäude stets einen einwandfreien ersten Eindruck hinterlässt – egal, ob es sich um regelmäßige Reinigung oder technische Betreuung handelt. Wir wissen, wie wichtig ein reibungsloser Ablauf ist, deshalb arbeiten wir präzise, schnell und effizient.",
+      haus_services_title: "Unsere Leistungen umfassen:",
+      haus_service1:
+        "Regelmäßige Reinigung von Stiegenhäusern und Gemeinschaftsräumen",
+      haus_service2: "Kleinreparaturen und technische Wartung",
+      haus_service3: "Kontrolle und Überwachung der Immobilie",
+      haus_why_title: "Warum MilCore s.r.o. wählen?",
+      haus_why1: "Zuverlässiges und kompetentes Team",
+      haus_why2: "Individueller Ansatz für jeden Kunden",
+      haus_why3: "Schnelle Reaktionszeit und Verfügbarkeit",
+      haus_why4: "Sichtbare Qualität",
+      haus_conclusion:
+        "Überlassen Sie die Betreuung Ihrer Immobilie den Profis und genießen Sie eine saubere und sichere Umgebung.",
+      haus_final:
+        "MilCore s.r.o – Wir kümmern uns um Ihre Immobilie, als wäre es unsere eigene.",
+
+      garden_title:
+        "Gartenpflege – Perfekt gepflegter Garten mit MilCore s.r.o",
+      garden_intro1:
+        "Ein schöner Garten ist mehr als nur ein Außenbereich – er ist Ihre persönliche Oase der Entspannung. Mit MilCore s.r.o haben Sie einen zuverlässigen Partner an Ihrer Seite, der Ihren Garten das ganze Jahr über professionell pflegt und verschönert.",
+      garden_intro2:
+        "Unser erfahrenes Team bietet Ihnen umfassende Leistungen im Bereich Gartenpflege – individuell abgestimmt auf Ihre Wünsche und die Bedürfnisse Ihrer Grünflächen.",
+      garden_services_title: "Unsere Leistungen im Überblick:",
+      garden_service1: "Regelmäßiges Rasenmähen und Rasenpflege",
+      garden_service2: "Heckenschnitt und Formschnitt",
+      garden_service3: "Pflege von Blumenbeeten und Pflanzen",
+      garden_service4: "Unkrautentfernung und Bodenpflege",
+      garden_service5: "Laubentsorgung und saisonale Arbeiten",
+      garden_service6:
+        "Vorbereitung Ihres Gartens für Frühling und Winter",
+      garden_why_title: "Warum MilCore s.r.o.?",
+      garden_why1: "Professionelle und erfahrene Mitarbeiter",
+      garden_why2: "Flexible Termine und individuelle Betreuung",
+      garden_why3: "Hochwertige Ausrüstung und saubere Arbeit",
+      garden_why4: "Faire Preise und transparente Angebote",
+      garden_conclusion:
+        "Wir arbeiten effizient, zuverlässig und mit viel Liebe zum Detail. Egal ob privater Garten oder gewerbliche Anlage – wir sorgen dafür, dass Ihre Grünflächen immer gepflegt und einladend aussehen.",
+      garden_final:
+        "Vertrauen Sie auf Qualität und Erfahrung – überlassen Sie Ihre Gartenpflege den Profis von MilCore s.r.o.",
+      garden_cta:
+        "👉 Kontaktieren Sie uns noch heute und lassen Sie Ihren Garten in neuem Glanz erstrahlen!",
+
+      winter_title:
+        "Winterdienst – Sicherheit und Zuverlässigkeit mit MilCore s.r.o",
+      winter_intro1:
+        "Der Winter bringt Schnee, Eis und anspruchsvolle Bedingungen mit sich, die die Sicherheit Ihrer Flächen gefährden können. Mit MilCore s.r.o müssen Sie sich keine Sorgen machen – wir sorgen für einen zuverlässigen und rechtzeitigen Winterdienst.",
+      winter_intro2:
+        "Unser Team ist bereit, schnell und effizient zu reagieren – unabhängig vom Wetter –, damit Ihre Flächen jederzeit sicher und begehbar bleiben.",
+      winter_services_title: "Unsere Leistungen im Überblick:",
+      winter_service1:
+        "Schneeräumung von Gehwegen, Einfahrten und Parkplätzen",
+      winter_service2:
+        "Streuen mit Salz und abstumpfendem Material",
+      winter_service3: "Eisbeseitigung und Rutschprävention",
+      winter_service4:
+        "Regelmäßige Kontrollen und Einsätze während des Schneefalls",
+      winter_service5:
+        "Betreuung von privaten und gewerblichen Objekten",
+      winter_why_title: "Warum MilCore s.r.o.?",
+      winter_why1: "Schnelle Reaktion und Erreichbarkeit 24/7",
+      winter_why2: "Zuverlässiges und erfahrenes Team",
+      winter_why3:
+        "Professionelle Ausrüstung für alle Bedingungen",
+      winter_why4: "Flexible Verträge und faire Preise",
+      winter_conclusion:
+        "Wir arbeiten verantwortungsbewusst und organisiert, mit laufender Beobachtung der Wetterbedingungen, damit wir rechtzeitig eingreifen können.",
+      winter_final:
+        "Vertrauen Sie den Winterdienst den Profis an und sorgen Sie für Sicherheit für sich, Ihre Mitarbeiter und Kunden mit MilCore s.r.o.",
+      winter_cta:
+        "👉 Kontaktieren Sie uns noch heute und bereiten Sie sich stressfrei auf den Winter vor!",
+
+      disposal_title:
+        "Entrümpelung – Schnell, sauber und zuverlässig mit MilCore s.r.o",
+      disposal_intro1:
+        "Müssen Sie eine Wohnung, ein Haus, ein Büro oder einen Keller räumen? MilCore s.r.o bietet Ihnen professionelle Entrümpelungsdienste, damit Sie unnötige Dinge schnell und ohne Aufwand loswerden.",
+      disposal_intro2:
+        "Ob alte Möbel, Elektrogeräte, Abfälle nach einer Renovierung oder eine komplette Räumung von Räumen – unser Team arbeitet effizient, diskret und mit besonderem Augenmerk auf Sauberkeit und Ordnung.",
+      disposal_services_title: "Unsere Leistungen im Überblick:",
+      disposal_service1:
+        "Entrümpelung von Wohnungen, Häusern, Kellern und Büros",
+      disposal_service2:
+        "Abtransport von alten Möbeln und Elektrogeräten",
+      disposal_service3:
+        "Entsorgung von Sperrmüll und gemischtem Abfall",
+      disposal_service4:
+        "Entrümpelung nach Umzug, Renovierung oder Nachlassfällen",
+      disposal_service5:
+        "Umweltgerechte Entsorgung und Mülltrennung",
+      disposal_why_title: "Warum MilCore s.r.o.?",
+      disposal_why1:
+        "Schnelle Termine und zuverlässige Durchführung",
+      disposal_why2:
+        "Erfahrenes Team und professioneller Ansatz",
+      disposal_why3: "Saubere und effiziente Arbeit",
+      disposal_why4:
+        "Transparente Preise ohne versteckte Kosten",
+      disposal_conclusion:
+        "Wir kümmern uns von Anfang bis Ende um die komplette Räumung, damit Sie sich um nichts kümmern müssen.",
+      disposal_final:
+        "Befreien Sie sich einfach und stressfrei von Überflüssigem – mit MilCore s.r.o.",
+      disposal_cta:
+        "👉 Kontaktieren Sie uns noch heute und wir kümmern uns um eine schnelle und professionelle Entrümpelung!",
+
       back_button: "Zurück zur Startseite",
     },
   },
+
   en: {
     translation: {
       hero_title: "Professional Building Maintenance Services",
@@ -108,6 +323,120 @@ const resources = {
       menu: "Menu",
       close: "Close",
       language: "Language",
+
+      about_title: "A reliable partner for your properties",
+      about_text:
+        "We provide complete care for buildings, outdoor areas and surroundings with a focus on quality, speed and professional service.",
+
+      haus_title:
+        "MilCore s.r.o – Your reliable partner for property maintenance",
+      haus_intro1:
+        "Looking for reliable and professional building management? MilCore s.r.o provides comprehensive property maintenance services with responsibility, quality, and flexibility.",
+      haus_intro2:
+        "Our team ensures your property always leaves a perfect impression—whether it’s regular cleaning or technical maintenance. We understand how important smooth operation is, so we work precisely, quickly, and efficiently.",
+      haus_services_title: "Our services include:",
+      haus_service1: "Regular cleaning of stairways and common areas",
+      haus_service2: "Minor repairs and technical maintenance",
+      haus_service3: "Control and inspection of the property",
+      haus_why_title: "Why choose MilCore s.r.o.?",
+      haus_why1: "Reliable and skilled team",
+      haus_why2: "Individual approach to every client",
+      haus_why3: "Quick response and availability",
+      haus_why4: "Visible quality",
+      haus_conclusion:
+        "Trust your property to professionals and enjoy a clean and safe environment.",
+      haus_final:
+        "MilCore s.r.o – We care for your property as if it were our own.",
+
+      garden_title:
+        "Garden Maintenance – Perfectly maintained garden with MilCore s.r.o",
+      garden_intro1:
+        "A beautiful garden is more than just an outdoor space – it is your personal oasis of peace and relaxation. With MilCore s.r.o, you have a reliable partner who will take professional care of your garden all year round.",
+      garden_intro2:
+        "Our experienced team offers comprehensive garden maintenance services tailored to your wishes and the needs of your green areas.",
+      garden_services_title: "Our services include:",
+      garden_service1: "Regular lawn mowing and lawn care",
+      garden_service2: "Hedge trimming and shaping",
+      garden_service3: "Care of flower beds and plants",
+      garden_service4: "Weed removal and soil care",
+      garden_service5: "Leaf removal and seasonal work",
+      garden_service6:
+        "Preparing your garden for spring and winter",
+      garden_why_title: "Why MilCore s.r.o.?",
+      garden_why1: "Professional and experienced staff",
+      garden_why2:
+        "Flexible appointments and individual support",
+      garden_why3:
+        "High-quality equipment and clean work",
+      garden_why4: "Fair prices and transparent offers",
+      garden_conclusion:
+        "We work efficiently, reliably, and with great attention to detail. Whether it is a private garden or a commercial property, we make sure your green areas always look neat and inviting.",
+      garden_final:
+        "Trust in quality and experience – leave your garden maintenance to the professionals at MilCore s.r.o.",
+      garden_cta:
+        "👉 Contact us today and let your garden shine in new splendor!",
+
+      winter_title:
+        "Winter Service – Safety and reliability with MilCore s.r.o",
+      winter_intro1:
+        "Winter brings snow, ice, and demanding conditions that can endanger the safety of your areas. With MilCore s.r.o, you do not have to worry – we provide reliable and timely winter service.",
+      winter_intro2:
+        "Our team is ready to respond quickly and efficiently regardless of the weather, so your areas remain safe and accessible at all times.",
+      winter_services_title: "Our services include:",
+      winter_service1:
+        "Snow removal from sidewalks, driveways, and parking lots",
+      winter_service2:
+        "Spreading salt and anti-slip material",
+      winter_service3: "Ice removal and slip prevention",
+      winter_service4:
+        "Regular inspections and interventions during snowfall",
+      winter_service5:
+        "Maintenance of private and commercial properties",
+      winter_why_title: "Why MilCore s.r.o.?",
+      winter_why1: "Fast response and 24/7 availability",
+      winter_why2: "Reliable and experienced team",
+      winter_why3:
+        "Professional equipment for all conditions",
+      winter_why4: "Flexible contracts and fair prices",
+      winter_conclusion:
+        "We work responsibly and in an organized way, with constant monitoring of weather conditions so that we can act in time.",
+      winter_final:
+        "Leave winter maintenance to professionals and ensure safety for yourself, your employees, and your clients with MilCore s.r.o.",
+      winter_cta:
+        "👉 Contact us today and get ready for winter without stress!",
+
+      disposal_title:
+        "Decluttering – Fast, clean and reliable with MilCore s.r.o",
+      disposal_intro1:
+        "Do you need to clear out an apartment, house, office, or basement? MilCore s.r.o offers professional decluttering services so you can get rid of unnecessary items quickly and without hassle.",
+      disposal_intro2:
+        "Whether it is old furniture, appliances, renovation waste, or a complete property clearance, our team works efficiently, discreetly, and with a strong focus on cleanliness and order.",
+      disposal_services_title: "Our services include:",
+      disposal_service1:
+        "Clearing apartments, houses, basements, and offices",
+      disposal_service2:
+        "Removal of old furniture and electrical appliances",
+      disposal_service3:
+        "Disposal of bulky and mixed waste",
+      disposal_service4:
+        "Clearance after moving, renovation, or inheritance cases",
+      disposal_service5:
+        "Eco-friendly disposal and waste sorting",
+      disposal_why_title: "Why MilCore s.r.o.?",
+      disposal_why1:
+        "Fast appointments and reliable execution",
+      disposal_why2:
+        "Experienced team and professional approach",
+      disposal_why3: "Clean and efficient work",
+      disposal_why4:
+        "Transparent prices with no hidden costs",
+      disposal_conclusion:
+        "We take care of the complete clearance from start to finish so you do not have to worry about anything.",
+      disposal_final:
+        "Free yourself from unnecessary clutter easily and without stress – with MilCore s.r.o.",
+      disposal_cta:
+        "👉 Contact us today and we will take care of a fast and professional clearance!",
+
       back_button: "Back to Home",
     },
   },
@@ -415,7 +744,10 @@ function Navbar() {
                     <button
                       key={lang}
                       type="button"
-                      onClick={() => changeLanguage(lang)}
+                      onClick={() => {
+                        changeLanguage(lang);
+                        setMenuOpen(false);
+                      }}
                       className={`mobileMenu__langBtn ${
                         i18n.language === lang
                           ? "mobileMenu__langBtn--active"
@@ -572,9 +904,7 @@ function Contact() {
   const [status, setStatus] = React.useState("");
   const [errors, setErrors] = React.useState({});
 
-  const validateEmail = (email) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  };
+  const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -597,19 +927,13 @@ function Contact() {
 
     const newErrors = {};
 
-    if (!form.name.trim()) {
-      newErrors.name = t("form_name_required");
-    }
-
+    if (!form.name.trim()) newErrors.name = t("form_name_required");
     if (!form.email.trim()) {
       newErrors.email = t("form_email_required");
     } else if (!validateEmail(form.email)) {
       newErrors.email = t("form_email_invalid");
     }
-
-    if (!form.message.trim()) {
-      newErrors.message = t("form_message_required");
-    }
+    if (!form.message.trim()) newErrors.message = t("form_message_required");
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
