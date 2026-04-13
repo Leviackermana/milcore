@@ -9,6 +9,7 @@ import {
   Route,
   Link,
   useLocation,
+  useNavigate,
 } from "react-router-dom";
 import Hausbetreuung from "./Hausbetreuung";
 import Gartenpflege from "./Gartenpflege";
@@ -238,18 +239,15 @@ const resources = {
       winter_services_title: "Unsere Leistungen im Überblick:",
       winter_service1:
         "Schneeräumung von Gehwegen, Einfahrten und Parkplätzen",
-      winter_service2:
-        "Streuen mit Salz und abstumpfendem Material",
+      winter_service2: "Streuen mit Salz und abstumpfendem Material",
       winter_service3: "Eisbeseitigung und Rutschprävention",
       winter_service4:
         "Regelmäßige Kontrollen und Einsätze während des Schneefalls",
-      winter_service5:
-        "Betreuung von privaten und gewerblichen Objekten",
+      winter_service5: "Betreuung von privaten und gewerblichen Objekten",
       winter_why_title: "Warum MilCore s.r.o.?",
       winter_why1: "Schnelle Reaktion und Erreichbarkeit 24/7",
       winter_why2: "Zuverlässiges und erfahrenes Team",
-      winter_why3:
-        "Professionelle Ausrüstung für alle Bedingungen",
+      winter_why3: "Professionelle Ausrüstung für alle Bedingungen",
       winter_why4: "Flexible Verträge und faire Preise",
       winter_conclusion:
         "Wir arbeiten verantwortungsbewusst und organisiert, mit laufender Beobachtung der Wetterbedingungen, damit wir rechtzeitig eingreifen können.",
@@ -364,10 +362,8 @@ const resources = {
         "Preparing your garden for spring and winter",
       garden_why_title: "Why MilCore s.r.o.?",
       garden_why1: "Professional and experienced staff",
-      garden_why2:
-        "Flexible appointments and individual support",
-      garden_why3:
-        "High-quality equipment and clean work",
+      garden_why2: "Flexible appointments and individual support",
+      garden_why3: "High-quality equipment and clean work",
       garden_why4: "Fair prices and transparent offers",
       garden_conclusion:
         "We work efficiently, reliably, and with great attention to detail. Whether it is a private garden or a commercial property, we make sure your green areas always look neat and inviting.",
@@ -385,8 +381,7 @@ const resources = {
       winter_services_title: "Our services include:",
       winter_service1:
         "Snow removal from sidewalks, driveways, and parking lots",
-      winter_service2:
-        "Spreading salt and anti-slip material",
+      winter_service2: "Spreading salt and anti-slip material",
       winter_service3: "Ice removal and slip prevention",
       winter_service4:
         "Regular inspections and interventions during snowfall",
@@ -395,8 +390,7 @@ const resources = {
       winter_why_title: "Why MilCore s.r.o.?",
       winter_why1: "Fast response and 24/7 availability",
       winter_why2: "Reliable and experienced team",
-      winter_why3:
-        "Professional equipment for all conditions",
+      winter_why3: "Professional equipment for all conditions",
       winter_why4: "Flexible contracts and fair prices",
       winter_conclusion:
         "We work responsibly and in an organized way, with constant monitoring of weather conditions so that we can act in time.",
@@ -423,13 +417,10 @@ const resources = {
       disposal_service5:
         "Eco-friendly disposal and waste sorting",
       disposal_why_title: "Why MilCore s.r.o.?",
-      disposal_why1:
-        "Fast appointments and reliable execution",
-      disposal_why2:
-        "Experienced team and professional approach",
+      disposal_why1: "Fast appointments and reliable execution",
+      disposal_why2: "Experienced team and professional approach",
       disposal_why3: "Clean and efficient work",
-      disposal_why4:
-        "Transparent prices with no hidden costs",
+      disposal_why4: "Transparent prices with no hidden costs",
       disposal_conclusion:
         "We take care of the complete clearance from start to finish so you do not have to worry about anything.",
       disposal_final:
@@ -481,10 +472,11 @@ function useOutsideClick(refs, handler) {
 function Navbar() {
   const { t, i18n } = useTranslation();
   const location = useLocation();
+  const navigate = useNavigate();
 
   const [scrolled, setScrolled] = React.useState(false);
   const [isMobile, setIsMobile] = React.useState(
-    typeof window !== "undefined" ? window.innerWidth <= 900 : false
+    typeof window !== "undefined" ? window.innerWidth <= 820 : false
   );
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [langOpen, setLangOpen] = React.useState(false);
@@ -520,7 +512,7 @@ function Navbar() {
     };
 
     const handleResize = () => {
-      const mobile = window.innerWidth <= 900;
+      const mobile = window.innerWidth <= 820;
       setIsMobile(mobile);
 
       if (!mobile) {
@@ -564,7 +556,7 @@ function Navbar() {
     setMenuOpen(false);
 
     if (location.pathname !== "/") {
-      window.location.href = `/#${targetId}`;
+      navigate(`/#${targetId}`);
       return;
     }
 
@@ -688,78 +680,79 @@ function Navbar() {
               exit={{ opacity: 0 }}
             />
 
-         <motion.aside
-  ref={menuRef}
-  className="mobileMenu"
-  initial={{ x: "100%" }}
-  animate={{ x: 0 }}
-  exit={{ x: "100%" }}
-  transition={{ duration: 0.28, ease: "easeOut" }}
->
-  <div className="mobileMenu__top">
-    <span className="mobileMenu__title">MilCore</span>
-    <button
-      type="button"
-      className="mobileMenu__close"
-      onClick={() => setMenuOpen(false)}
-    >
-      ×
-    </button>
-  </div>
+            <motion.aside
+              ref={menuRef}
+              className="mobileMenu"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.28, ease: "easeOut" }}
+            >
+              <div className="mobileMenu__top">
+                <span className="mobileMenu__title">MilCore</span>
+                <button
+                  type="button"
+                  className="mobileMenu__close"
+                  onClick={() => setMenuOpen(false)}
+                  aria-label={t("close")}
+                >
+                  ×
+                </button>
+              </div>
 
-  <div className="mobileMenu__bottom">
-    <p className="mobileMenu__label">{t("language")}</p>
-    <div className="mobileMenu__langs">
-      {["sk", "de", "en"].map((lang) => (
-        <button
-          key={lang}
-          type="button"
-          onClick={() => {
-            changeLanguage(lang);
-            setMenuOpen(false);
-          }}
-          className={`mobileMenu__langBtn ${
-            i18n.language === lang
-              ? "mobileMenu__langBtn--active"
-              : ""
-          }`}
-        >
-          {lang.toUpperCase()}
-        </button>
-      ))}
-    </div>
-  </div>
+              <div className="mobileMenu__section">
+                {navItems.map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    className={`mobileMenu__link ${
+                      location.pathname === "/" && activeSection === item.id
+                        ? "mobileMenu__link--active"
+                        : ""
+                    }`}
+                    onClick={() => scrollOrGo(item.id)}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </div>
 
-  <div className="mobileMenu__section">
-    {navItems.map((item) => (
-      <button
-        key={item.id}
-        type="button"
-        className={`mobileMenu__link ${
-          location.pathname === "/" && activeSection === item.id
-            ? "mobileMenu__link--active"
-            : ""
-        }`}
-        onClick={() => scrollOrGo(item.id)}
-      >
-        {item.label}
-      </button>
-    ))}
-  </div>
+              <div className="mobileMenu__section">
+                {serviceLinks.map((item) => (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    className="mobileMenu__subLink"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
 
-  <div className="mobileMenu__section">
-    {serviceLinks.map((item) => (
-      <Link
-        key={item.to}
-        to={item.to}
-        className="mobileMenu__subLink"
-        onClick={() => setMenuOpen(false)}
-      >
-        {item.label}
-      </Link>
-    ))}
-  </div>
-</motion.aside>
+              <div className="mobileMenu__bottom">
+                <p className="mobileMenu__label">{t("language")}</p>
+                <div className="mobileMenu__langs">
+                  {["sk", "de", "en"].map((lang) => (
+                    <button
+                      key={lang}
+                      type="button"
+                      onClick={() => {
+                        changeLanguage(lang);
+                        setMenuOpen(false);
+                      }}
+                      className={`mobileMenu__langBtn ${
+                        i18n.language === lang
+                          ? "mobileMenu__langBtn--active"
+                          : ""
+                      }`}
+                    >
+                      {lang.toUpperCase()}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </motion.aside>
           </>
         )}
       </AnimatePresence>
@@ -810,7 +803,13 @@ function Services() {
       title: t("srv_cleaning"),
       path: "/hausbetreuung",
       icon: (
-        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <svg
+          width="50"
+          height="50"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
           <path d="M3 21h18" stroke="#ff7a1f" strokeWidth="2" />
           <path d="M8 17h8l1-10H7l1 10z" stroke="#ff7a1f" strokeWidth="2" />
           <path d="M10 7V3h4v4" stroke="#ff7a1f" strokeWidth="2" />
@@ -821,7 +820,13 @@ function Services() {
       title: t("srv_garden"),
       path: "/gartenpflege",
       icon: (
-        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <svg
+          width="50"
+          height="50"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
           <path
             d="M12 22V12C12 6 8 3 4 2c0 4 2 10 8 10"
             stroke="#ff7a1f"
@@ -839,7 +844,13 @@ function Services() {
       title: t("srv_winter"),
       path: "/winterdienst",
       icon: (
-        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <svg
+          width="50"
+          height="50"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
           <path d="M12 2v20" stroke="#ff7a1f" strokeWidth="2" />
           <path d="M4 7l16 10M20 7L4 17" stroke="#ff7a1f" strokeWidth="2" />
         </svg>
@@ -849,7 +860,13 @@ function Services() {
       title: t("srv_disposal"),
       path: "/entrumpelung",
       icon: (
-        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <svg
+          width="50"
+          height="50"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
           <path d="M3 6h18" stroke="#ff7a1f" strokeWidth="2" />
           <path
             d="M8 6v12a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V6"
@@ -981,11 +998,15 @@ function Contact() {
                 value={form.name}
                 onChange={handleChange}
                 placeholder={t("form_name")}
-                className={`field__input ${errors.name ? "field__input--error" : ""}`}
+                className={`field__input ${
+                  errors.name ? "field__input--error" : ""
+                }`}
                 autoComplete="name"
                 required
               />
-              {errors.name && <span className="field__error">{errors.name}</span>}
+              {errors.name && (
+                <span className="field__error">{errors.name}</span>
+              )}
             </div>
 
             <div className="field">
@@ -999,11 +1020,15 @@ function Contact() {
                 value={form.email}
                 onChange={handleChange}
                 placeholder={t("form_email")}
-                className={`field__input ${errors.email ? "field__input--error" : ""}`}
+                className={`field__input ${
+                  errors.email ? "field__input--error" : ""
+                }`}
                 autoComplete="email"
                 required
               />
-              {errors.email && <span className="field__error">{errors.email}</span>}
+              {errors.email && (
+                <span className="field__error">{errors.email}</span>
+              )}
             </div>
 
             <div className="field">
@@ -1043,9 +1068,38 @@ function Contact() {
 }
 
 function AppContent() {
+  const location = useLocation();
+
   React.useEffect(() => {
     document.documentElement.lang = i18n.language || "sk";
   }, []);
+
+  React.useEffect(() => {
+    document.documentElement.lang = i18n.language || "sk";
+  }, [i18n.language]);
+
+  React.useEffect(() => {
+    if (location.pathname !== "/") return;
+
+    if (!location.hash) return;
+
+    const targetId = location.hash.replace("#", "");
+
+    const scrollToTarget = () => {
+      if (targetId === "home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+
+      const el = document.getElementById(targetId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
+
+    const timer = setTimeout(scrollToTarget, 120);
+    return () => clearTimeout(timer);
+  }, [location.pathname, location.hash]);
 
   return (
     <div className="app">
