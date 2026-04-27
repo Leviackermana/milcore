@@ -855,3 +855,42 @@ textarea:focus-visible {
     padding: 16px;
   }
 }
+/* FORCE MOBILE FIX */
+
+@media (max-width: 560px) {
+  .servicesGrid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .serviceCard {
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+    text-align: left !important;
+    padding: 18px !important;
+  }
+
+  .serviceCard__icon {
+    margin-bottom: 0 !important;
+    flex: 0 0 auto !important;
+  }
+
+  .serviceCard__icon svg {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .hero {
+    align-items: flex-end !important;
+    padding-bottom: 54px !important;
+  }
+
+  .hero__inner {
+    transform: none !important;
+  }
+
+  .mobileMenu {
+    width: 100vw !important;
+    max-width: none !important;
+  }
+}
