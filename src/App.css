@@ -357,33 +357,21 @@ textarea:focus-visible {
   align-items: center;
   justify-content: center;
   text-align: center;
-  overflow: hidden; /* BITNO */
-}
 
-/* 🔥 PRAVI FIXED BACKGROUND */
-.hero::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-
-  background-image: inherit;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
+} /* ✅ OVO JE FALILO */
 
-/* overlay ostaje iznad slike */
+
 .hero__overlay {
   position: absolute;
   inset: 0;
-  z-index: -1;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.76) 0%,
-      rgba(10, 10, 10, 0.94) 100%
-    );
+  background: linear-gradient(
+    180deg,
+    rgba(5, 4, 4, 0.76) 0%,
+    rgba(10, 10, 10, 0.94) 100%
+  );
 }
 
 .hero__inner {
