@@ -3,6 +3,7 @@ import { useTranslation, initReactI18next } from "react-i18next";
 import i18n from "i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import bg from "./assets/Nova slika.png";
+import bgMobile from "./assets/Nova slikam.png";
 import {
   BrowserRouter as Router,
   Routes,
@@ -760,14 +761,36 @@ function Navbar() {
   );
 }
 
+function useIsMobile(breakpoint = 560) {
+  const [isMobile, setIsMobile] = React.useState(
+    typeof window !== "undefined" ? window.innerWidth <= breakpoint : false
+  );
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= breakpoint);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [breakpoint]);
+
+  return isMobile;
+}
+
 function Hero() {
   const { t } = useTranslation();
+  const isMobile = useIsMobile(560);
 
   return (
     <section
       className="hero"
       style={{
-        backgroundImage: `url(${bg})`,
+        backgroundImage: `url(${isMobile ? bgMobile : bg})`,
       }}
     >
       <div className="hero__overlay" />
